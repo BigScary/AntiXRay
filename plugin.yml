@@ -1,0 +1,12 @@
+name: AntiXRay
+main: me.ryanhamshire.AntiXRay.AntiXRay
+softdepend: [Multiverse-Core, My Worlds, Transporter]
+version: 1.5.6
+commands:
+permissions:
+    antixray.bypass:
+        description: Allows a player to mine any block without exception.
+        default: false
+    antixray.monitorxrayers:
+        description: If configured, allows a player to receive notifications about players who reach their mining speed limit.
+        default: op
