@@ -75,7 +75,7 @@ public class BlockEventHandler implements Listener
 			if(entry.getKey() == block.getType())
 			{
 				//if he doesn't have enough points
-				if(playerData.points < entry.getValue())
+				if(entry.getValue() > 0 && playerData.points < entry.getValue())
 				{
 					//estimate how long it will be before he can break this block
 					int minutesUntilBreak = (int)((entry.getValue() - playerData.points) / (float)(AntiXRay.instance.config_pointsPerHour) * 60);
@@ -101,7 +101,7 @@ public class BlockEventHandler implements Listener
 						for(int j = 0; j < players.length; j++)
 						{
 							Player moderator = players[j];
-							if(moderator.hasPermission("antixray.minotorxrayers"))
+							if(moderator.hasPermission("antixray.monitorxrayers"))
 							{
 								AntiXRay.sendMessage(moderator, TextMode.Instr, Messages.AdminNotification, player.getName());
 							}
